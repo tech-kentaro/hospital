@@ -197,6 +197,7 @@ img {
 .header__title {
   text-align: center;
   font-size: 2.0rem;
+  font-weight: normal;
   line-height: 50px;
 }
 
@@ -440,5 +441,55 @@ img {
 
 .info__li {
   margin-bottom: 15px;
+}
+
+@media (min-width: 1024px) {
+  .contentWidth, .header__container {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .global__btn {
+    display: none;
+  }
+  .global__time {
+    display: none;
+  }
+  .header {
+    height: 80px;
+  }
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__title {
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 80px;
+  }
+  .header__font {
+    display: block;
+    line-height: 80px;
+  }
+  .header__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__li {
+    font-size: 1.8rem;
+  }
+  .header__li:first-child {
+    padding-right: 15px;
+  }
+  .header__li a {
+    padding: 15px;
+    border: 1px solid #333;
+    background-color: #fff;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,56 @@
+@media (min-width: 1024px) {
+  .contentWidth {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .global {
+    &__btn {
+      display: none;
+    }
+
+    &__time {
+      display: none;
+    }
+  }
+
+  .header {
+    height: 80px;
+
+    &__container {
+      @extend .contentWidth;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      text-align: left;
+      font-size: 2.4rem;
+      line-height: 80px;
+    }
+
+    &__font {
+      display: block;
+      line-height: 80px;
+    }
+
+    &__ul {
+      display: flex;
+    }
+
+    &__li {
+      font-size: 1.8rem;
+
+      &:first-child {
+        padding-right: 15px;
+      }
+
+      a {
+        padding: 15px;
+        border: 1px solid $black;
+        background-color: $white;
+      }
+    }
+  }
+}
