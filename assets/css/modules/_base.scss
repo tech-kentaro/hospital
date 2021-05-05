@@ -201,11 +201,27 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: $sub;
+    background: $white;
+    border: 1px solid $black;
   }
 
   &__container {
     padding: 20px;
+  }
+
+  &__head {
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+
+  &__wrapper {
+    margin-top: 15px;
+
+    dt {
+      margin-bottom: 5px;
+      color: $gray;
+      font-size: 1.4rem;
+    }
   }
 
 }
