@@ -16,6 +16,7 @@
   }
 
   .header {
+    position: absolute;
     height: 80px;
 
     &__container {
@@ -53,4 +54,61 @@
       }
     }
   }
+
+  .navbar {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: $sub;
+    height: 80px;
+
+    &__ul {
+      @extend .contentWidth;
+      display: flex;
+    }
+
+    &__li {
+      width: calc(100% / 6);
+
+      &:last-child {
+        a {
+          border-right: 1px solid $black;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      text-align: center;
+      line-height: 80px;
+      border-left: 1px solid $black;
+    }
+
+    &__inner {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__news {
+      width: 40%;
+    }
+
+    &__head {
+      font-size: 2.0rem;
+    }
+
+    &__wrapper {
+      display: flex;
+
+      dt {
+        padding-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
 }
