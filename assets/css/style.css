@@ -23,7 +23,6 @@ ul {
 img {
   max-width: 100%;
   vertical-align: bottom;
-  width: 150px !important;
 }
 
 * {
@@ -230,5 +229,32 @@ img {
   margin-bottom: 5px;
   color: #cecece;
   font-size: 1.4rem;
+}
+
+.about__container {
+  padding: 60px 30px;
+  margin: 0 20px;
+  background-color: #fff;
+}
+
+.about__title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+.about__description {
+  margin-bottom: 60px;
+}
+
+.about__link {
+  display: block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #333;
 }
 /*# sourceMappingURL=style.css.map */

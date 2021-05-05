@@ -22,7 +22,6 @@ ul {
 img {
   max-width: 100%;
   vertical-align: bottom;
-  width: 150px !important;
 }
 
 * {
@@ -222,6 +221,35 @@ img {
       color: $gray;
       font-size: 1.4rem;
     }
+  }
+}
+
+.about {
+  &__container {
+    padding: 60px 30px;
+    margin: 0 20px;
+    background-color: $white;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: normal;
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid $black;
   }
 
 }
