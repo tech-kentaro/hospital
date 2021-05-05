@@ -47,6 +47,13 @@ img {
   height: 100vh;
 }
 
+.spTitle, .about__title, .consul__title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
 .global {
   position: relative;
 }
@@ -231,17 +238,14 @@ img {
   font-size: 1.4rem;
 }
 
+.about {
+  padding-top: 60px;
+}
+
 .about__container {
   padding: 60px 30px;
   margin: 0 20px;
   background-color: #fff;
-}
-
-.about__title {
-  text-align: center;
-  font-size: 3.2rem;
-  font-weight: normal;
-  margin-bottom: 60px;
 }
 
 .about__description {
@@ -256,5 +260,21 @@ img {
   margin: 0 auto;
   text-align: center;
   border: 1px solid #333;
+}
+
+.consul {
+  padding: 60px 20px 0;
+}
+
+.consul__wrapper {
+  margin-bottom: 60px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+.consul__description {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -44,6 +44,13 @@ img {
   height: 100vh;
 }
 
+.spTitle {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
 .global {
   position: relative;
 
@@ -225,6 +232,8 @@ img {
 }
 
 .about {
+  padding-top: 60px;
+
   &__container {
     padding: 60px 30px;
     margin: 0 20px;
@@ -232,10 +241,7 @@ img {
   }
 
   &__title {
-    text-align: center;
-    font-size: 3.2rem;
-    font-weight: normal;
-    margin-bottom: 60px;
+    @extend .spTitle;
   }
 
   &__description {
@@ -251,5 +257,24 @@ img {
     text-align: center;
     border: 1px solid $black;
   }
+}
 
+.consul {
+  padding: 60px 20px 0;
+
+  &__title {
+    @extend .spTitle;
+  }
+
+  &__wrapper {
+    margin-bottom: 60px;
+    background-color: $white;
+    border: 1px solid $black;
+  }
+
+  &__description {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+  }
 }
