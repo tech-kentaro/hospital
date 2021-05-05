@@ -66,7 +66,7 @@ img {
   position: relative;
 
   &__btn {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 20px;
     width: 50px;
@@ -118,7 +118,7 @@ img {
   }
 
   &__time {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 20px;
     width: 50px;
@@ -272,6 +272,7 @@ img {
   }
 
   &__wrapper {
+    display: block;
     margin-bottom: 60px;
     background-color: $white;
     border: 1px solid $black;
@@ -287,8 +288,13 @@ img {
 .other {
   padding: 60px 20px;
   background-color: $sub;
+
   &__wrapper {
     margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__box {
@@ -314,5 +320,42 @@ img {
 
   &__link {
     @extend .spBtn;
+  }
+}
+
+.footer {
+  background-color: $main;
+  padding: 50px 20px 60px;
+
+  &__title {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 0;
+    font-size: 2.0rem;
+
+    &::before {
+      content: '\f105';
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      padding-right: 10px;
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &__inner-link {
+    display: block;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+
+  &__copy {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.4rem;
   }
 }
