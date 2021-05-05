@@ -202,4 +202,20 @@
     }
   }
 
+  .consul {
+    padding-top: 120px;
+    
+    &__wrapper {
+      @extend .contentWidth;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__box {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
 }
