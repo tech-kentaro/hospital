@@ -554,13 +554,16 @@ img {
     bottom: 0;
     right: 0;
     background-color: #fff;
-    width: 480px;
+    width: 540px;
     border: 1px solid #333;
     border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    -webkit-transform: translateX(480px);
+            transform: translateX(480px);
   }
   .hero__table table {
     display: block;
-    padding: 30px;
+    padding: 30px 30px 30px 80px;
   }
   .hero__table table thead {
     border-bottom: 1px solid #333;
@@ -586,6 +589,21 @@ img {
     display: block;
     padding-right: 15px;
   }
+  .hero__vertical {
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    position: absolute;
+    top: 24%;
+    left: 10px;
+    font-weight: normal;
+    font-size: 2.4rem;
+  }
+  .hero__vertical::before {
+    content: '\f017';
+    font-family: 'FontAwesome';
+    padding-bottom: 5px;
+  }
   .hero__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -593,13 +611,12 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 30px 30px;
+    padding: 0 80px 30px;
   }
   .hero__tel::before {
     content: '\f095';
     font-family: 'FontAwesome';
     padding-right: 10px;
-    font-size: 2rem;
   }
   .about::before {
     height: calc(100% - 60px);

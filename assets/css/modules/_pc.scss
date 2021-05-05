@@ -118,13 +118,15 @@
       bottom: 0;
       right: 0;
       background-color: $white;
-      width: 480px;
+      width: 540px;
       border: 1px solid $black;
       border-radius: 10px 0 0 10px;
+      cursor: pointer;
+      transform: translateX(480px);
 
       table {
         display: block;
-        padding: 30px;
+        padding: 30px 30px 30px 80px;
 
         thead {
           border-bottom: 1px solid $black;
@@ -156,10 +158,25 @@
       }
     }
 
+    &__vertical {
+      writing-mode: vertical-lr;
+      position: absolute;
+      top: 24%;
+      left: 10px;
+      font-weight: normal;
+      font-size: 2.4rem;
+
+      &::before {
+        content: '\f017';
+        font-family: 'FontAwesome';
+        padding-bottom: 5px;
+      }
+    }
+
     &__text {
       display: flex;
       justify-content: space-between;
-      padding: 0 30px 30px;
+      padding: 0 80px 30px;
     }
 
     &__tel {
@@ -167,7 +184,6 @@
         content: '\f095';
         font-family: 'FontAwesome';
         padding-right: 10px;
-        font-size: 2rem;
       }
     }
   }
