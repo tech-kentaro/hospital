@@ -62,7 +62,7 @@ img {
   margin: 0 auto;
   text-align: center;
   border: 1px solid #333;
-  background-color: #fff;
+  background-color: magenta;
 }
 
 .global {
@@ -196,7 +196,7 @@ img {
 
 .header__title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   line-height: 50px;
 }
 
@@ -251,20 +251,56 @@ img {
 
 .about {
   padding-top: 60px;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  background-color: cyan;
 }
 
 .about__container {
   padding: 60px 30px;
   margin: 0 20px;
   background-color: #fff;
+  border: 1px solid #333;
+  position: relative;
+  z-index: 1;
 }
 
 .about__description {
   margin-bottom: 60px;
 }
 
+.about__image {
+  position: relative;
+  z-index: 1;
+}
+
 .consul {
-  padding: 60px 20px 0;
+  padding-top: 60px;
+}
+
+.consul__container {
+  padding: 0 20px;
+  position: relative;
+}
+
+.consul__container::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: magenta;
 }
 
 .consul__wrapper {
@@ -272,12 +308,16 @@ img {
   margin-bottom: 60px;
   background-color: #fff;
   border: 1px solid #333;
+  position: relative;
+  z-index: 1;
 }
 
 .consul__description {
   padding: 20px 0;
   text-align: center;
   font-size: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .consul__description::after {
