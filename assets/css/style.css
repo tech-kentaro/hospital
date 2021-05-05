@@ -280,6 +280,13 @@ img {
   font-size: 2rem;
 }
 
+.consul__description::after {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  padding-left: 10px;
+  font-size: 2.4rem;
+}
+
 .other {
   padding: 60px 20px;
   background-color: cyan;
@@ -348,5 +355,50 @@ img {
   text-align: center;
   margin-top: 50px;
   font-size: 1.4rem;
+}
+
+.info {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: cyan;
+  padding: 60px 30px;
+}
+
+.info__title {
+  font-size: 2.4rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.info__description {
+  margin-bottom: 30px;
+}
+
+.info__image {
+  margin-bottom: 30px;
+  display: block;
+}
+
+.info__sub {
+  font-size: 2.0rem;
+  font-weight: normal;
+  border-left: 5px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 0 0 10px 15px;
+  margin-bottom: 30px;
+}
+
+.info__ul {
+  padding: 0 10px;
+}
+
+.info__li {
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
