@@ -109,6 +109,65 @@
         margin-bottom: 0;
       }
     }
+
+    &__table {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $white;
+      width: 480px;
+      border: 1px solid $black;
+      border-radius: 10px 0 0 10px;
+
+      table {
+        display: block;
+        padding: 30px;
+
+        thead {
+          border-bottom: 1px solid $black;
+        }
+
+        th {
+          padding: 10px;
+          text-align: center;
+          font-weight: normal;
+
+          &:first-child {
+            border-right: 1px solid $black;
+            margin-right: 5px;
+            display: block;
+            padding-right: 15px;
+          }
+        }
+        td {
+          padding: 10px;
+          text-align: center;
+
+          &:first-child {
+            border-right: 1px solid $black;
+            margin-right: 5px;
+            display: block;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px 30px;
+    }
+
+    &__tel {
+      &::before {
+        content: '\f095';
+        font-family: 'FontAwesome';
+        padding-right: 10px;
+        font-size: 2rem;
+      }
+    }
   }
 
 }

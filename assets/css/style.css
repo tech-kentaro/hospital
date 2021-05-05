@@ -250,6 +250,10 @@ img {
   font-size: 1.4rem;
 }
 
+.hero__table {
+  display: none;
+}
+
 .about {
   padding-top: 60px;
   position: relative;
@@ -536,6 +540,59 @@ img {
   .hero__wrapper dt {
     padding-right: 20px;
     margin-bottom: 0;
+  }
+  .hero__table {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    width: 480px;
+    border: 1px solid #333;
+    border-radius: 10px 0 0 10px;
+  }
+  .hero__table table {
+    display: block;
+    padding: 30px;
+  }
+  .hero__table table thead {
+    border-bottom: 1px solid #333;
+  }
+  .hero__table table th {
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+  }
+  .hero__table table th:first-child {
+    border-right: 1px solid #333;
+    margin-right: 5px;
+    display: block;
+    padding-right: 15px;
+  }
+  .hero__table table td {
+    padding: 10px;
+    text-align: center;
+  }
+  .hero__table table td:first-child {
+    border-right: 1px solid #333;
+    margin-right: 5px;
+    display: block;
+    padding-right: 15px;
+  }
+  .hero__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 30px 30px;
+  }
+  .hero__tel::before {
+    content: '\f095';
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
