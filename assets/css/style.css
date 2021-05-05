@@ -30,7 +30,7 @@ img {
           box-sizing: border-box;
 }
 
-.positionCenter, .global__ul, .global__time i {
+.positionCenter, .global__ul, .global__time i, .other__box i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,6 +52,17 @@ img {
   font-size: 3.2rem;
   font-weight: normal;
   margin-bottom: 60px;
+}
+
+.spBtn, .about__link, .other__link {
+  display: block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #333;
+  background-color: #fff;
 }
 
 .global {
@@ -252,16 +263,6 @@ img {
   margin-bottom: 60px;
 }
 
-.about__link {
-  display: block;
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid #333;
-}
-
 .consul {
   padding: 60px 20px 0;
 }
@@ -276,5 +277,34 @@ img {
   padding: 20px 0;
   text-align: center;
   font-size: 2rem;
+}
+
+.other {
+  padding: 60px 20px;
+  background-color: cyan;
+}
+
+.other__wrapper {
+  margin-bottom: 60px;
+}
+
+.other__box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 30px;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.other__box i {
+  font-size: 8.0rem;
+}
+
+.other__description {
+  font-size: 2.0rem;
+  text-align: center;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */
