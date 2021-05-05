@@ -259,12 +259,15 @@ img {
   }
 
   &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__wrapper {
     padding: 60px 30px;
     margin: 0 20px;
     background-color: $white;
     border: 1px solid $black;
-    position: relative;
-    z-index: 1
   }
 
   &__title {
@@ -277,11 +280,6 @@ img {
 
   &__link {
     @extend .spBtn;
-  }
-
-  &__image {
-    position: relative;
-    z-index: 1;
   }
 }
 

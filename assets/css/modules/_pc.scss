@@ -93,6 +93,8 @@
   }
 
   .hero {
+    margin-bottom: 90px;
+
     &__news {
       width: 40%;
     }
@@ -167,6 +169,36 @@
         padding-right: 10px;
         font-size: 2rem;
       }
+    }
+  }
+
+  .about {
+    &::before {
+      height: calc(100% - 60px);
+    }
+
+    &__container {
+      @extend .contentWidth;
+      display: flex;
+      justify-content: space-between;
+      border: 5px solid $black;
+      background-color: $white;
+      flex-direction: row-reverse;
+      padding: 30px;
+    }
+
+    &__wrapper {
+      padding: 20px;
+      width: 50%;
+      border: none;
+    }
+
+    &__title {
+      padding-top: 90px;
+    }
+
+    &__image {
+      width: 50%;
     }
   }
 
