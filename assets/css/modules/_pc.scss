@@ -264,4 +264,23 @@
       margin-top: 30px;
     }
   }
+
+  .info {
+    &__title {
+      font-size: 3.2rem;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__image {
+      width: 48%;
+    }
+
+    &__sub {
+      font-size: 2.4rem;
+    }
+  }
 }
