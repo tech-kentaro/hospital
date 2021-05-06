@@ -42,3 +42,39 @@
   z-index: $z-index;
   @content;
 }
+
+@mixin linkUnderLine (
+  $which: after,
+  $content: '',
+  $position: absolute,
+  $bottom: 5px,
+  $left: 10%,
+  $width: 80%,
+  $height: 2px,
+  $background-color: $white,
+  $transition: all .3s,
+  $transform: scaleX(0),
+  $transform-origin: left top,
+  $hover: hover,
+  $scale: scaleX(1),
+) {
+  &::#{$which} {
+    content: $content;
+    position: $position;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    transition: $transition;
+    transform: $transform;
+    transform-origin: $transform-origin;
+    @content;
+  }
+
+  &:#{hover} {
+    &::#{$which} {
+      transform: $scale;
+    }
+  }
+}

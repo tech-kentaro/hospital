@@ -125,6 +125,9 @@ img {
       display: block;
       padding: 15px;
       color: $white;
+      position: relative;
+
+      @include linkUnderLine;
     }
   }
 
@@ -415,12 +418,18 @@ img {
     padding: 20px 0;
     text-align: center;
     font-size: 2rem;
+    transition: all .3s;
 
     &::after {
       content: '\f105';
       font-family: 'FontAwesome';
       padding-left: 10px;
       font-size: 2.4rem;
+    }
+
+    &:hover {
+      background-color: $main;
+      color: $white;
     }
   }
 }
@@ -503,6 +512,7 @@ img {
     padding: 10px 0;
     font-size: 2.0rem;
     color: $white;
+    transition: all .3s;
 
     &::before {
       content: '\f105';
@@ -512,6 +522,10 @@ img {
       position: relative;
       top: -1px;
     }
+
+    &:hover {
+      color: $gray;
+    }
   }
 
   &__inner-link {
@@ -519,6 +533,11 @@ img {
     font-size: 1.6rem;
     padding: 10px 20px;
     color: $white;
+    transition: all .3s;
+
+    &:hover {
+      color: $gray;
+    }
   }
 
   &__copy {
