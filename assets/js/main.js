@@ -1,3 +1,27 @@
+function mediaQuery() {
+  const winW = $(window).width();
+  if (winW < 1024) {
+    if ($('html').hasClass('fontChangeLarge')) {
+      $('html').removeClass('fontChangeLarge');
+    }
+    if ($('.navbar').hasClass('navbarFixed')) {
+      $('.navbar').removeClass('navbarFixed');
+    }
+  }
+}
+
+function fixedAnime() {
+  const winW = $(window).width();
+  if (winW >= 1024) {
+    const scroll = $(window).scrollTop();
+    if (scroll >= 80) {
+      $('.navbar').addClass('navbarFixed');
+    } else {
+      $('.navbar').removeClass('navbarFixed');
+    }
+  }
+}
+
 $('.hero__slider').slick({
   fade: true,
   autoplay: true,
@@ -72,3 +96,15 @@ $('.large').click(function() {
   $('html').addClass('fontChangeLarge')
   return false;
 });
+
+$(window).resize(function() {
+  mediaQuery();
+});
+
+$(window).scroll(function() {
+  fixedAnime();
+});
+
+// $(window).on('load', function() {
+//   fixedAnime();
+// })

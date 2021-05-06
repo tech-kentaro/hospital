@@ -954,4 +954,10 @@ img {
     font-size: 62.5%;
   }
 }
+
+.navbarFixed {
+  position: fixed;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
 /*# sourceMappingURL=style.css.map */
