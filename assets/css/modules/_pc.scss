@@ -97,6 +97,7 @@
 
     &__news {
       width: 40%;
+      border-radius: 0 10px 10px 0;
     }
 
     &__head {
@@ -123,7 +124,7 @@
       border-radius: 10px 0 0 10px;
       cursor: pointer;
       transform: translateX(480px);
-      transition: all .8s;
+      transition: all .8s ease-in-out;
 
       table {
         display: block;
@@ -179,12 +180,12 @@
     }
 
     &__text {
-      display: flex;
-      justify-content: space-between;
       padding: 0 80px 30px;
     }
 
     &__tel {
+      margin-top: 5px;
+
       &::before {
         content: '\f095';
         font-family: 'FontAwesome';

@@ -16,6 +16,22 @@ $('.hero__slider').on('touchmove', function(event, slick, currentSlide, nextSlid
   $('.hero__slider').slick('slickPlay');
 });
 
+let slider;
+
+function sliderSet() {
+  slider = $('.hero__bxSlider').bxSlider({
+    touchEnabled: false,
+    mode: 'vertical',
+    controls: false,
+    auto: 'true',
+    pager: true,
+  });
+}
+
+$(window).on('load resize', function() {
+  sliderSet();
+});
+
 $('.global__btn, .global__li a').click(function() {
   if ($('body').hasClass('active')) {
     $('body').removeClass('active');
