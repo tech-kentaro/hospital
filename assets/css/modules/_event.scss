@@ -227,3 +227,46 @@
     
   }
 }
+
+.appear {
+  .global {
+    animation: appear .5s ease-in forwards;
+    opacity: 0;
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: $main;
+}
+
+.progressbar-text {
+  font-size: 3rem;
+
+  span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .progressbar-text {
+    font-size: 5rem;
+  
+    span {
+      font-size: 2rem;
+    }
+  }
+}

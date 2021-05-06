@@ -74,6 +74,7 @@ img {
 }
 
 .global {
+  opacity: 0;
   position: relative;
 }
 
@@ -1655,6 +1656,56 @@ img {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.appear .global {
+  -webkit-animation: appear .5s ease-in forwards;
+          animation: appear .5s ease-in forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #449a44;
+}
+
+.progressbar-text {
+  font-size: 3rem;
+}
+
+.progressbar-text span {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  .progressbar-text {
+    font-size: 5rem;
+  }
+  .progressbar-text span {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
