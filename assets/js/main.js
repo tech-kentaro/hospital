@@ -1,23 +1,4 @@
-// const access = $.cookie('access');
-// if (!access) {
-//   flag = true;
-//   $.cookie('access', false);
-// } else {
-//   flag = false;
-// }
-
-// $('.modal').modaal({
-//   start_open: flag,
-//   overlay_close: true,
-//   before_open: function() {
-//     $('html').css('overflow-y', 'hidden');
-//   },
-//   after_open: function() {
-//     $('html').css('overflow-y', 'scroll');
-//   }
-// });
-
-var access = $.cookie("access");
+const access = $.cookie("access");
 if (!access) {
   flag = true;
   $.cookie("access", false);
@@ -61,6 +42,18 @@ function fixedAnime() {
     } else {
       $('.navbar').removeClass('navbarFixed');
     }
+  }
+}
+
+function tableFixed() {
+  const scroll = $(window).scrollTop();
+  const table = $('.hero__table');
+  if (scroll >= 556) {
+    table.removeClass('tableHover');
+    table.addClass('tableFixed');
+  } else {
+    table.removeClass('tableFixed');
+    table.addClass('tableHover');
   }
 }
 
@@ -128,6 +121,18 @@ function pageTop() {
   }
 }
 
+let slider;
+
+function sliderSet() {
+  slider = $('.hero__bxSlider').bxSlider({
+    touchEnabled: false,
+    mode: 'vertical',
+    controls: false,
+    auto: 'true',
+    pager: true,
+  });
+}
+
 $('.hero__slider').slick({
   fade: true,
   autoplay: true,
@@ -146,21 +151,6 @@ $('.hero__slider').on('touchmove', function(event, slick, currentSlide, nextSlid
   $('.hero__slider').slick('slickPlay');
 });
 
-let slider;
-
-function sliderSet() {
-  slider = $('.hero__bxSlider').bxSlider({
-    touchEnabled: false,
-    mode: 'vertical',
-    controls: false,
-    auto: 'true',
-    pager: true,
-  });
-}
-
-$(window).on('load resize', function() {
-  sliderSet();
-});
 
 $('.global__btn, .global__li a').click(function() {
   if ($('body').hasClass('active')) {
@@ -214,15 +204,23 @@ $('.global__top').click(function() {
 $(window).resize(function() {
   mediaQuery();
   pageTop();
+  sliderSet();
+  tableFixed();
+  fixedAnime();
+  fadeAnime();
 });
 
 $(window).scroll(function() {
   fixedAnime();
   fadeAnime();
   pageTop();
+  tableFixed();
+  sliderSet();
 });
 
 $(window).on('load', function() {
   fadeAnime();
   pageTop();
-})
+  sliderSet();
+  tableFixed();
+});

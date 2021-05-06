@@ -393,6 +393,8 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   z-index: 1;
 }
@@ -573,6 +575,20 @@ img {
   background-color: #fff !important;
 }
 
+@media (min-width: 480px) {
+  .consul__box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .consul__box {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 @media (min-width: 1024px) {
   .contentWidth, .header__container, .navbar__ul, .about__container, .consul__wrapper, .other__container, .footer__container {
     max-width: 1130px;
@@ -724,17 +740,20 @@ img {
   .hero__table {
     display: block;
     position: absolute;
+    z-index: 5;
     bottom: 0;
     right: 0;
     background-color: #fff;
-    width: 540px;
+    width: 500px;
     border: 1px solid #333;
     border-radius: 10px 0 0 10px;
     cursor: pointer;
-    -webkit-transform: translateX(480px);
-            transform: translateX(480px);
-    -webkit-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
+    -webkit-transform: translateX(440px);
+            transform: translateX(440px);
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
   }
   .hero__table table {
     display: block;
@@ -768,6 +787,14 @@ img {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  .hero__table.tableHover {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .hero__table.tableFixed {
+    position: fixed;
+    bottom: calc(100% - 64px - 308px);
+  }
   .hero__vertical {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
@@ -784,7 +811,7 @@ img {
     padding-bottom: 5px;
   }
   .hero__text {
-    padding: 0 80px 30px;
+    padding: 30px 30px 30px 80px;
   }
   .hero__tel {
     margin-top: 5px;
@@ -827,11 +854,6 @@ img {
     padding-top: 120px;
   }
   .consul__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
