@@ -30,7 +30,7 @@ img {
           box-sizing: border-box;
 }
 
-.positionCenter, .global__ul, .global__time i, .other__box i {
+.positionCenter, .global__ul, .global__time i, .global__top a i, .other__box i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,6 +220,25 @@ img {
   transition: all 0.6s;
   z-index: 100;
   right: -15px;
+}
+
+.global__top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  display: none;
+}
+
+.global__top a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: magenta;
+}
+
+.global__top a i {
+  font-size: 2.4em;
 }
 
 .header {

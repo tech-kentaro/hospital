@@ -55,6 +55,17 @@ function fadeAnime() {
   });
 }
 
+function pageTop() {
+  const elTop = $('.about').offset().top;
+  const scroll = $(window).scrollTop();
+  const pageTop = $('.global__top');
+  if (scroll >= elTop) {
+    pageTop.fadeIn();
+  } else {
+    pageTop.fadeOut();
+  }
+}
+
 $('.hero__slider').slick({
   fade: true,
   autoplay: true,
@@ -122,6 +133,7 @@ $('.medium').click(function() {
   }
   return false;
 });
+
 $('.large').click(function() {
   if ($('html').hasClass('fontChangeMedium')) {
     $('html').removeClass('fontChangeMedium');
@@ -130,15 +142,25 @@ $('.large').click(function() {
   return false;
 });
 
+$('.global__top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0,
+  }, 600);
+  return false;
+});
+
 $(window).resize(function() {
   mediaQuery();
+  pageTop();
 });
 
 $(window).scroll(function() {
   fixedAnime();
   fadeAnime();
+  pageTop();
 });
 
 $(window).on('load', function() {
   fadeAnime();
+  pageTop();
 })
