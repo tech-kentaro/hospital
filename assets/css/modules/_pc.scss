@@ -96,8 +96,13 @@
     margin-bottom: 90px;
 
     &__news {
-      width: 40%;
+      width: 50%;
+      max-width: 540px;
       border-radius: 0 10px 10px 0;
+    }
+
+    &__container {
+      padding-right: 0;
     }
 
     &__head {
@@ -305,4 +310,8 @@
       font-size: 2.4rem;
     }
   }
+}
+
+.bx-pager {
+  right: 10px;
 }

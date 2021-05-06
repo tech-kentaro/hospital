@@ -603,8 +603,12 @@ img {
     margin-bottom: 90px;
   }
   .hero__news {
-    width: 40%;
+    width: 50%;
+    max-width: 540px;
     border-radius: 0 10px 10px 0;
+  }
+  .hero__container {
+    padding-right: 0;
   }
   .hero__head {
     font-size: 2.0rem;
@@ -799,6 +803,10 @@ img {
   .info__sub {
     font-size: 2.4rem;
   }
+}
+
+.bx-pager {
+  right: 10px;
 }
 
 .active .global__btn span:nth-of-type(1) {
