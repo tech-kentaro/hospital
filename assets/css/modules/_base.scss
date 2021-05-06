@@ -397,6 +397,20 @@ img {
     border: 1px solid $black;
   }
 
+  &__mask {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__image {
+    transition: all .3s;
+
+    &:hover {
+      transform: rotate(5deg) scale(1.2);
+      opacity: .8;
+    }
+  }
+
   &__description {
     padding: 20px 0;
     text-align: center;

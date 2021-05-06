@@ -435,6 +435,22 @@ img {
   border: 1px solid #333;
 }
 
+.consul__mask {
+  display: block;
+  overflow: hidden;
+}
+
+.consul__image {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.consul__image:hover {
+  -webkit-transform: rotate(5deg) scale(1.2);
+          transform: rotate(5deg) scale(1.2);
+  opacity: .8;
+}
+
 .consul__description {
   padding: 20px 0;
   text-align: center;
