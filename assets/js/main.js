@@ -33,6 +33,26 @@ function fadeAnime() {
       $(this).removeClass('inView');
     }
   });
+  $('.coverSlide').each(function() {
+    const elTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const winH = $(window).height();
+    if (scroll >= elTop - winH) {
+      $(this).addClass('inView');
+    } else {
+      $(this).removeClass('inView');
+    }
+  });
+  $('.imgZoom').each(function() {
+    const elTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const winH = $(window).height();
+    if (scroll >= elTop - winH) {
+      $(this).addClass('inView');
+    } else {
+      $(this).removeClass('inView');
+    }
+  });
 }
 
 $('.hero__slider').slick({

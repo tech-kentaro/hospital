@@ -98,7 +98,6 @@
 
 $pattern: (
   'up': translateY(200px),
-  'down': translateY(-200px),
   'left': translateX(100px),
   'right': translateX(-100px),
 );
@@ -127,5 +126,69 @@ $pattern: (
         }
       }
     }
+  }
+}
+
+.coverSlide {
+  position: relative;
+  overflow: hidden;
+
+  @include backSquare {
+    background-color: $accent;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  &.inView {
+    &::before {
+      animation: coverSlide 1.6s ease-in-out forwards;
+      opacity: 1;
+
+      @keyframes coverSlide {
+        0% {
+          transform-origin: left;
+          transform: scaleX(0);
+        }
+        50% {
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+        50.1% {
+          transform-origin: right;
+          transform: scaleX(1);
+        }
+        100% {
+          transform-origin: right;
+          transform: scaleX(0);
+        }
+      }
+    }
+  }
+}
+
+.imgZoom {
+  opacity: 0;
+
+  &.inView {
+    opacity: 1;
+    transition: all .3s ease;
+    animation: imgZoom 1.6s ease-in-out forwards;
+
+    @keyframes imgZoom {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      50.1% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
   }
 }

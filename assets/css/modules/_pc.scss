@@ -6,6 +6,8 @@
   }
 
   .global {
+    overflow-x: hidden;
+    
     &__btn {
       display: none;
     }
