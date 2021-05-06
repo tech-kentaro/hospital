@@ -41,3 +41,18 @@ $('.global__time').click(function() {
     times.addClass('dBlock');
   }
 });
+
+$('.medium').click(function() {
+  if ($('html').hasClass('fontChangeLarge')) {
+    $('html').removeClass('fontChangeLarge');
+    $('html').addClass('fontChangeMedium')
+  }
+  return false;
+});
+$('.large').click(function() {
+  if ($('html').hasClass('fontChangeMedium')) {
+    $('html').removeClass('fontChangeMedium');
+  }
+  $('html').addClass('fontChangeLarge')
+  return false;
+});

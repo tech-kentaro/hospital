@@ -748,10 +748,10 @@ img {
   .footer__title {
     font-size: 2.4rem;
     display: block;
-    width: 50%;
+    width: 40%;
   }
   .footer__nav {
-    width: 50%;
+    width: 60%;
   }
   .footer__ul {
     display: -webkit-box;
@@ -849,6 +849,52 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+
+.fontChangeLarge {
+  -webkit-animation: fontChangeLarge .3s forwards;
+          animation: fontChangeLarge .3s forwards;
+}
+
+@-webkit-keyframes fontChangeLarge {
+  from {
+    font-size: 62.5%;
+  }
+  to {
+    font-size: 80%;
+  }
+}
+
+@keyframes fontChangeLarge {
+  from {
+    font-size: 62.5%;
+  }
+  to {
+    font-size: 80%;
+  }
+}
+
+.fontChangeMedium {
+  -webkit-animation: fontChangeMedium .3s forwards;
+          animation: fontChangeMedium .3s forwards;
+}
+
+@-webkit-keyframes fontChangeMedium {
+  from {
+    font-size: 80%;
+  }
+  to {
+    font-size: 62.5%;
+  }
+}
+
+@keyframes fontChangeMedium {
+  from {
+    font-size: 80%;
+  }
+  to {
+    font-size: 62.5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

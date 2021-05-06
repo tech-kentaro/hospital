@@ -60,3 +60,29 @@
     }
   }
 }
+
+.fontChangeLarge {
+  animation: fontChangeLarge .3s forwards;
+  
+  @keyframes fontChangeLarge {
+    from {
+      font-size: 62.5%;
+    }
+    to {
+      font-size: 80%;
+    }
+  }
+}
+
+.fontChangeMedium {
+  animation: fontChangeMedium .3s forwards;
+  
+  @keyframes fontChangeMedium {
+    from {
+      font-size: 80%;
+    }
+    to {
+      font-size: 62.5%;
+    }
+  }
+}
