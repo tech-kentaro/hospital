@@ -597,7 +597,41 @@ img {
     border-left: 1px solid #333;
   }
   .navbar__inner {
-    display: none;
+    opacity: 0;
+    background: cyan;
+    visibility: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+  .navbar__inner a {
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+  .navbar .hasChild {
+    position: relative;
+  }
+  .navbar .hasChild::before {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 2.4rem;
+  }
+  .navbar .hasChild:hover::before {
+    content: '\f106';
+  }
+  .navbar .hasChild:hover .navbar__inner {
+    opacity: 1;
+    visibility: visible;
   }
   .hero {
     margin-bottom: 90px;

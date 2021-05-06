@@ -88,7 +88,46 @@
     }
 
     &__inner {
-      display: none;
+      opacity: 0;
+      background: $sub;
+      visibility: hidden;
+      transition: all .3s;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+
+      a {
+        display: block;
+        line-height: 80px;
+        text-align: center;
+        border-top: 1px solid $black;
+      }
+    }
+
+    .hasChild {
+      position: relative;
+
+      &::before {
+        content: '\f107';
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.4rem;
+      }
+
+      &:hover {
+        &::before {
+          content: '\f106';
+        }
+
+        .navbar__inner {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
   }
 
