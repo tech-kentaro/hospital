@@ -948,7 +948,8 @@ img {
   }
   .hero__table.tableFixed {
     position: fixed;
-    bottom: calc(100% - 64px - 308px);
+    bottom: auto;
+    top: 64px;
   }
   .hero__vertical {
     -webkit-writing-mode: vertical-lr;

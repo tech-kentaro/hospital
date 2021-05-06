@@ -28,6 +28,8 @@ function tableFixed() {
   const tableH = $('.hero__table').height();
   const winH = $(window).height();
   const headerH = $('.header').height();
+  const height = 100% - headerH - tableH;
+  console.log(height);
   if (scroll >= winH - tableH - headerH) {
     table.removeClass('tableHover');
     table.addClass('tableFixed');

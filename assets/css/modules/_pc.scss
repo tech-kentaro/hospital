@@ -267,7 +267,8 @@
 
       &.tableFixed {
         position: fixed;
-        bottom: calc(100% - 64px - 308px);
+        bottom: auto;
+        top: 64px;
       }
     }
 
