@@ -1,26 +1,3 @@
-const access = $.cookie("access");
-if (!access) {
-  flag = true;
-  $.cookie("access", false);
-} else {
-  flag = false;
-}
-
-//モーダル表示
-$(".modal").modaal({
-  start_open: flag, // ページロード時に表示するか
-  overlay_close: true, //モーダル背景クリック時に閉じるか
-  background: "#000", // 背景色
-  before_open: function () {
-    // モーダルが開く前に行う動作
-    $("html").css("overflow-y", "hidden"); /*縦スクロールバーを出さない*/
-  },
-  after_close: function () {
-    // モーダルが閉じた後に行う動作
-    $("html").css("overflow-y", "scroll"); /*縦スクロールバーを出す*/
-  },
-});
-
 function mediaQuery() {
   const winW = $(window).width();
   if (winW < 1024) {
@@ -48,7 +25,7 @@ function fixedAnime() {
 function tableFixed() {
   const scroll = $(window).scrollTop();
   const table = $('.hero__table');
-  if (scroll >= 556) {
+  if (scroll >= 526) {
     table.removeClass('tableHover');
     table.addClass('tableFixed');
   } else {
@@ -133,24 +110,45 @@ function sliderSet() {
   });
 }
 
-$('.hero__slider').slick({
-  fade: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  speed: 1000,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  pauseOnDotsHover: false,
-});
+function slideInit() {
+  $('.hero__slider').slick({
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+  });
 
-$('.hero__slider').on('touchmove', function(event, slick, currentSlide, nextSlide) {
-  $('.hero__slider').slick('slickPlay');
-});
+  $('.hero__slider').on('touchmove', function(event, slick, currentSlide, nextSlide) {
+    $('.hero__slider').slick('slickPlay');
+  });
+}
 
+const access = $.cookie("access");
+if (!access) {
+  flag = true;
+  $.cookie("access", false);
+} else {
+  flag = false;
+}
+
+$(".modal").modaal({
+  start_open: flag,
+  overlay_close: true,
+  background: "#000",
+  before_open: function () {
+    $("html").css("overflow-y", "hidden");
+  },
+  after_close: function () {
+    $("html").css("overflow-y", "scroll");
+  },
+});
 
 $('.global__btn, .global__li a').click(function() {
   if ($('body').hasClass('active')) {
@@ -223,4 +221,5 @@ $(window).on('load', function() {
   pageTop();
   sliderSet();
   tableFixed();
+  slideInit();
 });

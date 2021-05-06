@@ -660,7 +660,7 @@ img {
     border-left: 1px solid #333;
   }
   .navbar__li a {
-    padding: 20px 0;
+    line-height: 64px;
   }
   .navbar__li:last-child {
     border-right: 1px solid #333;
@@ -682,7 +682,7 @@ img {
   }
   .navbar__inner a {
     display: block;
-    padding: 20px 0;
+    line-height: 64px;
     text-align: center;
     border-top: 1px solid #333;
   }
@@ -707,7 +707,7 @@ img {
     visibility: visible;
   }
   .hero {
-    margin-top: 144px;
+    margin-top: calc(80px + 64px);
     margin-bottom: 90px;
     height: calc(100vh - 80px - 64px);
   }
@@ -1017,10 +1017,6 @@ img {
   to {
     font-size: 80%;
   }
-}
-
-.fontChangeLarge .navbar__inner {
-  top: 70px;
 }
 
 .fontChangeMedium {
