@@ -186,8 +186,10 @@ $('.global__time').click(function() {
 $('.medium').click(function() {
   if ($('html').hasClass('fontChangeLarge')) {
     $('html').removeClass('fontChangeLarge');
-    $('html').addClass('fontChangeMedium')
+    $('html').addClass('fontChangeMedium');
   }
+  $('.large').removeClass('fontActive');
+  $(this).addClass('fontActive');
   return false;
 });
 
@@ -195,7 +197,9 @@ $('.large').click(function() {
   if ($('html').hasClass('fontChangeMedium')) {
     $('html').removeClass('fontChangeMedium');
   }
-  $('html').addClass('fontChangeLarge')
+  $('html').addClass('fontChangeLarge');
+  $('.medium').removeClass('fontActive');
+  $(this).addClass('fontActive');
   return false;
 });
 

@@ -1709,4 +1709,9 @@ img {
     font-size: 2rem;
   }
 }
+
+.fontActive {
+  background-color: #449a44 !important;
+  color: #fff !important;
+}
 /*# sourceMappingURL=style.css.map */
