@@ -66,6 +66,7 @@ img {
   border: 1px solid $black;
   background-color: $accent;
   color: $white;
+  transition: all .3s;
 }
 
 .global {
@@ -215,8 +216,13 @@ img {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: rgba($accent, .8);
+      background-color: $accent;
       color: $white;
+      transition: all .3s;
+
+      &:hover {
+        opacity: .7;
+      }
 
       i {
         @extend .positionCenter;
@@ -345,6 +351,12 @@ img {
 
   &__link {
     @extend .spBtn;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      box-shadow: 5px 5px 10px rgba($accent, .5);
+    }
   }
 
   &__image {
@@ -434,6 +446,32 @@ img {
 
   &__link {
     @extend .spBtn;
+    position: relative;
+    z-index: 1;
+    transform-style: preserve-3d;
+    perspective: 300px;
+
+    @include backSquare {
+      opacity: 0;
+      background-color: $white;
+      transition: all .3s;
+      transform-origin: top center;
+      transform: rotateX(90deg);
+    }
+
+    span {
+      display: inline-block;
+      transform: translateZ(20px);
+    }
+
+    &:hover {
+      color: $black;
+
+      &::before {
+        transform: none;
+        opacity: 1;
+      }
+    }
   }
 }
 

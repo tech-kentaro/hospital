@@ -38,7 +38,7 @@
   .header {
     position: absolute;
     height: 80px;
-    background-color: $sub;
+    background-color: $base;
 
     &__container {
       @extend .contentWidth;
