@@ -22,6 +22,19 @@ function fixedAnime() {
   }
 }
 
+function fadeAnime() {
+  $('.appear').each(function() {
+    const elTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const winH = $(window).height();
+    if (scroll >= elTop - winH) {
+      $(this).addClass('inView');
+    } else {
+      $(this).removeClass('inView');
+    }
+  });
+}
+
 $('.hero__slider').slick({
   fade: true,
   autoplay: true,
@@ -103,8 +116,9 @@ $(window).resize(function() {
 
 $(window).scroll(function() {
   fixedAnime();
+  fadeAnime();
 });
 
-// $(window).on('load', function() {
-//   fixedAnime();
-// })
+$(window).on('load', function() {
+  fadeAnime();
+})

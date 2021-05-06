@@ -72,6 +72,10 @@
       font-size: 80%;
     }
   }
+
+  .navbar__inner {
+    top: 70px;
+  }
 }
 
 .fontChangeMedium {
@@ -90,4 +94,38 @@
 .navbarFixed {
   position: fixed;
   transform: translateY(-80px);
+}
+
+$pattern: (
+  'up': translateY(200px),
+  'down': translateY(-200px),
+  'left': translateX(100px),
+  'right': translateX(-100px),
+);
+
+@each $key, $value in $pattern {
+  .appear.#{$key} {
+    .item {
+      transform: $value;
+    }
+  }
+}
+
+.appear {
+  .item {
+    transition: all .8s;
+    opacity: 0;
+  }
+  &.inView {
+    .item {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * .1s;
+        }
+      }
+    }
+  }
 }
