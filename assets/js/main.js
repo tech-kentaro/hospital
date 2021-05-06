@@ -25,7 +25,10 @@ function fixedAnime() {
 function tableFixed() {
   const scroll = $(window).scrollTop();
   const table = $('.hero__table');
-  if (scroll >= 526) {
+  const tableH = $('.hero__table').height();
+  const winH = $(window).height();
+  const headerH = $('.header').height();
+  if (scroll >= winH - tableH - headerH) {
     table.removeClass('tableHover');
     table.addClass('tableFixed');
   } else {
