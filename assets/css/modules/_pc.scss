@@ -123,6 +123,7 @@
       border-radius: 10px 0 0 10px;
       cursor: pointer;
       transform: translateX(480px);
+      transition: all .8s;
 
       table {
         display: block;
@@ -155,6 +156,10 @@
             padding-right: 15px;
           }
         }
+      }
+
+      &:hover {
+        transform: translateX(0);
       }
     }
 

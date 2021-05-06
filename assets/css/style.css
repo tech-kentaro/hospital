@@ -46,6 +46,12 @@ img {
   height: 100vh;
 }
 
+.bgStyle, .hero__slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .spTitle, .about__title, .consul__title {
   text-align: center;
   font-size: 3.2rem;
@@ -248,12 +254,24 @@ img {
   position: relative;
 }
 
+.hero__slider {
+  height: 100vh;
+}
+
 .hero__slide {
   height: 100vh;
-  background-image: url(../img/cat.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.hero__slide:nth-child(1) {
+  background-image: url(../img/cat1.jpg);
+}
+
+.hero__slide:nth-child(2) {
+  background-image: url(../img/cat2.jpg);
+}
+
+.hero__slide:nth-child(3) {
+  background-image: url(../img/cat3.jpg);
 }
 
 .hero__news {
@@ -594,6 +612,8 @@ img {
     cursor: pointer;
     -webkit-transform: translateX(480px);
             transform: translateX(480px);
+    -webkit-transition: all .8s;
+    transition: all .8s;
   }
   .hero__table table {
     display: block;
@@ -622,6 +642,10 @@ img {
     margin-right: 5px;
     display: block;
     padding-right: 15px;
+  }
+  .hero__table:hover {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .hero__vertical {
     -webkit-writing-mode: vertical-lr;

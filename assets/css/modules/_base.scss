@@ -43,6 +43,12 @@ img {
   height: 100vh;
 }
 
+.bgStyle {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .spTitle {
   text-align: center;
   font-size: 3.2rem;
@@ -222,12 +228,19 @@ img {
   height: 100vh;
   position: relative;
 
+  &__slider {
+    height: 100vh;
+  }
+
   &__slide {
     height: 100vh;
-    background-image: url(../img/cat.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @extend .bgStyle;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        background-image: url(../img/cat#{$i}.jpg);
+      }
+    }
   }
 
   &__news {
