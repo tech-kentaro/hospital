@@ -197,10 +197,14 @@ img {
   font-size: 2rem;
   margin-bottom: 5px;
   width: 30%;
+  -webkit-animation-delay: .2s !important;
+          animation-delay: .2s !important;
 }
 
 .global__description dd {
   text-align: right;
+  -webkit-animation-delay: .3s !important;
+          animation-delay: .3s !important;
 }
 
 .global__description span {
@@ -234,7 +238,8 @@ img {
   display: block;
   width: 50px;
   height: 50px;
-  background-color: magenta;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 255, 0.8);
 }
 
 .global__top a i {
@@ -246,6 +251,9 @@ img {
   width: 100%;
   height: 50px;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 5;
 }
 
@@ -269,28 +277,33 @@ img {
 }
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: relative;
+  margin-top: 50px;
 }
 
 .hero__slider {
-  height: 100vh;
+  height: calc(100vh - 50px);
 }
 
 .hero__slide {
-  height: 100vh;
+  height: calc(100vh - 50px);
 }
 
 .hero__slide:nth-child(1) {
-  background-image: url(../img/cat1.jpg);
+  background-image: url(../img/slide1.jpg);
 }
 
 .hero__slide:nth-child(2) {
-  background-image: url(../img/cat2.jpg);
+  background-image: url(../img/slide2.jpg);
 }
 
 .hero__slide:nth-child(3) {
-  background-image: url(../img/cat3.jpg);
+  background-image: url(../img/slide3.jpg);
+}
+
+.hero__slide:nth-child(4) {
+  background-image: url(../img/slide4.jpg);
 }
 
 .hero__news {
@@ -678,7 +691,15 @@ img {
     visibility: visible;
   }
   .hero {
+    margin-top: 144px;
     margin-bottom: 90px;
+    height: calc(100vh - 80px - 64px);
+  }
+  .hero__slider {
+    height: calc(100vh - 80px - 64px);
+  }
+  .hero__slide {
+    height: calc(100vh - 80px - 64px);
   }
   .hero__news {
     width: 50%;
@@ -1021,62 +1042,62 @@ img {
   opacity: 0;
 }
 
-.fadeUp:nth-child(1) {
+.fadeUp:nth-of-type(1) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-.fadeUp:nth-child(2) {
+.fadeUp:nth-of-type(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.fadeUp:nth-child(3) {
+.fadeUp:nth-of-type(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-.fadeUp:nth-child(4) {
+.fadeUp:nth-of-type(4) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.fadeUp:nth-child(5) {
+.fadeUp:nth-of-type(5) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.fadeUp:nth-child(6) {
+.fadeUp:nth-of-type(6) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.fadeUp:nth-child(7) {
+.fadeUp:nth-of-type(7) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-.fadeUp:nth-child(8) {
+.fadeUp:nth-of-type(8) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.fadeUp:nth-child(9) {
+.fadeUp:nth-of-type(9) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-.fadeUp:nth-child(10) {
+.fadeUp:nth-of-type(10) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.fadeUp:nth-child(11) {
+.fadeUp:nth-of-type(11) {
   -webkit-animation-delay: 1.1s;
           animation-delay: 1.1s;
 }
 
-.fadeUp:nth-child(12) {
+.fadeUp:nth-of-type(12) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
@@ -1113,62 +1134,62 @@ img {
   opacity: 0;
 }
 
-.fadeLeft:nth-child(1) {
+.fadeLeft:nth-of-type(1) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-.fadeLeft:nth-child(2) {
+.fadeLeft:nth-of-type(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.fadeLeft:nth-child(3) {
+.fadeLeft:nth-of-type(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-.fadeLeft:nth-child(4) {
+.fadeLeft:nth-of-type(4) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.fadeLeft:nth-child(5) {
+.fadeLeft:nth-of-type(5) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.fadeLeft:nth-child(6) {
+.fadeLeft:nth-of-type(6) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.fadeLeft:nth-child(7) {
+.fadeLeft:nth-of-type(7) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-.fadeLeft:nth-child(8) {
+.fadeLeft:nth-of-type(8) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.fadeLeft:nth-child(9) {
+.fadeLeft:nth-of-type(9) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-.fadeLeft:nth-child(10) {
+.fadeLeft:nth-of-type(10) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.fadeLeft:nth-child(11) {
+.fadeLeft:nth-of-type(11) {
   -webkit-animation-delay: 1.1s;
           animation-delay: 1.1s;
 }
 
-.fadeLeft:nth-child(12) {
+.fadeLeft:nth-of-type(12) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
@@ -1205,62 +1226,62 @@ img {
   opacity: 0;
 }
 
-.fadeRight:nth-child(1) {
+.fadeRight:nth-of-type(1) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-.fadeRight:nth-child(2) {
+.fadeRight:nth-of-type(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.fadeRight:nth-child(3) {
+.fadeRight:nth-of-type(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-.fadeRight:nth-child(4) {
+.fadeRight:nth-of-type(4) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.fadeRight:nth-child(5) {
+.fadeRight:nth-of-type(5) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.fadeRight:nth-child(6) {
+.fadeRight:nth-of-type(6) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.fadeRight:nth-child(7) {
+.fadeRight:nth-of-type(7) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-.fadeRight:nth-child(8) {
+.fadeRight:nth-of-type(8) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.fadeRight:nth-child(9) {
+.fadeRight:nth-of-type(9) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-.fadeRight:nth-child(10) {
+.fadeRight:nth-of-type(10) {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.fadeRight:nth-child(11) {
+.fadeRight:nth-of-type(11) {
   -webkit-animation-delay: 1.1s;
           animation-delay: 1.1s;
 }
 
-.fadeRight:nth-child(12) {
+.fadeRight:nth-of-type(12) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }

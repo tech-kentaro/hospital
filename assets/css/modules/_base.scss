@@ -179,10 +179,12 @@ img {
       font-size: 2rem;
       margin-bottom: 5px;
       width: 30%;
+      animation-delay: .2s !important;
     }
 
     dd {
       text-align: right;
+      animation-delay: .3s !important;
     }
 
     span {
@@ -207,7 +209,8 @@ img {
       display: block;
       width: 50px;
       height: 50px;
-      background-color: $accent;
+      border-radius: 50%;
+      background-color: rgba($accent, .8);
 
       i {
         @extend .positionCenter;
@@ -222,6 +225,9 @@ img {
   width: 100%;
   height: 50px;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 5;
 
   &__container {
@@ -245,20 +251,21 @@ img {
 }
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: relative;
+  margin-top: 50px;
 
   &__slider {
-    height: 100vh;
+    height: calc(100vh - 50px);
   }
 
   &__slide {
-    height: 100vh;
+    height: calc(100vh - 50px);
     @extend .bgStyle;
 
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
       &:nth-child(#{$i}) {
-        background-image: url(../img/cat#{$i}.jpg);
+        background-image: url(../img/slide#{$i}.jpg);
       }
     }
   }

@@ -7,7 +7,7 @@
 
   .global {
     overflow-x: hidden;
-    
+
     &__btn {
       display: none;
     }
@@ -134,7 +134,17 @@
   }
 
   .hero {
+    margin-top: 144px;
     margin-bottom: 90px;
+    height: calc(100vh - 80px - 64px);
+
+    &__slider {
+      height: calc(100vh - 80px - 64px);
+    }
+
+    &__slide {
+      height: calc(100vh - 80px - 64px);
+    }
 
     &__news {
       width: 50%;

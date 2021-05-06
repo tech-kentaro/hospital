@@ -107,7 +107,7 @@
   opacity: 0;
 
   @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       animation-delay: .1s * $i;
     }
   }
@@ -129,7 +129,7 @@
   opacity: 0;
 
   @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       animation-delay: .1s * $i;
     }
   }
@@ -151,7 +151,7 @@
   opacity: 0;
 
   @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       animation-delay: .1s * $i;
     }
   }
