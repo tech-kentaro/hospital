@@ -1,4 +1,5 @@
 function mediaQuery() {
+  let flag = false;
   const winW = $(window).width();
   if (winW < 1024) {
     if ($('html').hasClass('fontChangeLarge')) {

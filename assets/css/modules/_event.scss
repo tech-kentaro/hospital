@@ -169,7 +169,7 @@
   overflow: hidden;
 
   @include backSquare {
-    background-color: $accent;
+    background-color: $main;
     z-index: 2;
     opacity: 0;
   }

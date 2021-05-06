@@ -38,6 +38,7 @@
   .header {
     position: absolute;
     height: 80px;
+    background-color: $sub;
 
     &__container {
       @extend .contentWidth;
@@ -49,6 +50,10 @@
       text-align: left;
       font-size: 2.4rem;
       line-height: 80px;
+
+      a {
+        color: $black;
+      }
     }
 
     &__font {
@@ -82,7 +87,7 @@
     left: 0;
     right: 0;
     z-index: 5;
-    background-color: $sub;
+    background-color: $main;
 
     &__ul {
       @extend .contentWidth;
@@ -91,14 +96,15 @@
 
     &__li {
       width: calc(100% / 6);
-      border-left: 1px solid $black;
+      border-left: 1px solid $white;
 
       a {
         line-height: 64px;
+        color: $white;
       }
 
       &:last-child {
-        border-right: 1px solid $black;
+        border-right: 1px solid $white;
       }
     }
 
@@ -109,7 +115,7 @@
 
     &__inner {
       opacity: 0;
-      background: $sub;
+      background: $main;
       visibility: hidden;
       transition: all .3s;
       position: absolute;
@@ -121,7 +127,7 @@
         display: block;
         line-height: 64px;
         text-align: center;
-        border-top: 1px solid $black;
+        border-top: 1px solid $white;
       }
     }
 
@@ -136,6 +142,7 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: 2.4rem;
+        color: $white;
       }
 
       &:hover {
