@@ -23,14 +23,34 @@ function fixedAnime() {
 }
 
 function fadeAnime() {
-  $('.appear').each(function() {
+  $('.fadeUpTrigger').each(function() {
     const elTop = $(this).offset().top;
     const scroll = $(window).scrollTop();
     const winH = $(window).height();
     if (scroll >= elTop - winH) {
-      $(this).addClass('inView');
+      $(this).addClass('fadeUp');
     } else {
-      $(this).removeClass('inView');
+      $(this).removeClass('fadeUp');
+    }
+  });
+  $('.fadeLeftTrigger').each(function() {
+    const elTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const winH = $(window).height();
+    if (scroll >= elTop - winH) {
+      $(this).addClass('fadeLeft');
+    } else {
+      $(this).removeClass('fadeLeft');
+    }
+  });
+  $('.fadeRightTrigger').each(function() {
+    const elTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const winH = $(window).height();
+    if (scroll >= elTop - winH) {
+      $(this).addClass('fadeRight');
+    } else {
+      $(this).removeClass('fadeRight');
     }
   });
   $('.coverSlide').each(function() {
