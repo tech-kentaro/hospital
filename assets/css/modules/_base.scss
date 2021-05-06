@@ -557,7 +557,6 @@ img {
   right: 0;
   width: 100%;
   z-index: 10;
-  background-color: $sub;
   padding: 60px 30px;
 
   &__title {
@@ -579,8 +578,8 @@ img {
   &__sub {
     font-size: 2.0rem;
     font-weight: normal;
-    border-left: 5px solid $black;
-    border-bottom: 1px solid $black;
+    border-left: 5px solid $accent;
+    border-bottom: 1px solid $accent;
     padding: 0 0 10px 15px;
     margin-bottom: 30px;
   }
@@ -613,6 +612,7 @@ img {
 
 .modaal-container {
   border-radius: 15px;
+  background-color: $base !important;
 }
 
 .modaal-close {
@@ -621,11 +621,11 @@ img {
 
   &::before,
   &::after {
-    background-color: $black !important;
+    background-color: $accent !important;
   }
 
   &:hover {
-    background-color: $black !important;
+    background-color: $main !important;
 
     &::before,
     &::after {

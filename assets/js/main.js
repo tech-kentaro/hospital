@@ -1,5 +1,4 @@
 function mediaQuery() {
-  let flag = false;
   const winW = $(window).width();
   if (winW < 1024) {
     if ($('html').hasClass('fontChangeLarge')) {
@@ -131,25 +130,27 @@ function slideInit() {
   });
 }
 
-const access = $.cookie("access");
-if (!access) {
-  flag = true;
-  $.cookie("access", false);
-} else {
-  flag = false;
+function cookieModal() {
+  const access = $.cookie("access");
+  if (!access) {
+    flag = true;
+    $.cookie("access", false);
+  } else {
+    flag = false;
+  }
+  
+  $(".modal").modaal({
+    start_open: flag,
+    overlay_close: true,
+    background: "#000",
+    before_open: function () {
+      $("html").css("overflow-y", "hidden");
+    },
+    after_close: function () {
+      $("html").css("overflow-y", "scroll");
+    },
+  });
 }
-
-$(".modal").modaal({
-  start_open: flag,
-  overlay_close: true,
-  background: "#000",
-  before_open: function () {
-    $("html").css("overflow-y", "hidden");
-  },
-  after_close: function () {
-    $("html").css("overflow-y", "scroll");
-  },
-});
 
 $('.global__btn, .global__li a').click(function() {
   if ($('body').hasClass('active')) {
@@ -230,6 +231,7 @@ $(window).on('load', function() {
       sliderSet();
       tableFixed();
       slideInit();
+      cookieModal();
     });
     
     $(window).resize(function() {
