@@ -1,0 +1,62 @@
+.active {
+  .global {
+    &__btn {
+      span {
+        &:nth-of-type(1) {
+          top: 18px;
+          left: 18px;
+          transform: translateY(6px) rotate(-135deg);
+          width: 30%;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          top: 30px;
+          left: 18px;
+          transform: translateY(-6px) rotate(135deg);
+          width: 30%;
+        }
+      }
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__ul {
+      opacity: 1;
+
+    }
+
+    &__circle {
+      transform: scale(50);
+    }
+  }
+}
+
+.activeTime {
+  .global {
+    &__inner {
+      display: block;
+    }
+
+    &__circleTime {
+      transform: scale(50);
+    }
+  }
+}
+
+.dBlock {
+  animation: dBlock .6s ease-in forwards;
+  opacity: 0;
+
+  @keyframes dBlock {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -19,3 +19,26 @@
     @content;
   }
 }
+
+@mixin circleBg (
+  $position: fixed,
+  $width: 100px,
+  $height: 100px,
+  $border-radius: 50%,
+  $background-color: $main,
+  $transform: scale(0),
+  $top: -15px,
+  $transition: all .6s,
+  $z-index: 100,
+) {
+  position: $position;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  transform: $transform;
+  top: $top;
+  transition: $transition;
+  z-index: $z-index;
+  @content;
+}

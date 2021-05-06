@@ -36,7 +36,6 @@ img {
 }
 
 .navCover {
-  background: $sub;
   position: absolute;
   top: 0;
   left: 0;
@@ -72,7 +71,7 @@ img {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 300;
 
     span {
       display: inline-block;
@@ -101,11 +100,14 @@ img {
   &__nav {
     @extend .navCover;
     display: none;
+    z-index: 200;
   }
 
   &__ul {
     @extend .positionCenter;
     text-align: center;
+    opacity: 0;
+    z-index: 9;
   }
 
   &__li {
@@ -117,6 +119,12 @@ img {
     }
   }
 
+  &__circle {
+    @include circleBg {
+      left: -15px;
+    }
+  }
+
   &__time {
     position: fixed;
     top: 0;
@@ -124,16 +132,18 @@ img {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 300;
 
     i {
       font-size: 3.0rem;
       @extend .positionCenter;
+      opacity: 0;
     }
   }
 
   &__inner {
     @extend .navCover;
+    z-index: 200;
     display: none;
   }
 
@@ -173,6 +183,12 @@ img {
       display: block;
     }
   }
+
+  &__circleTime {
+    @include circleBg {
+      right: -15px;
+    }
+  }
 }
 
 .header {
@@ -180,7 +196,7 @@ img {
   width: 100%;
   height: 50px;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
 
   &__container {
     padding: 0 20px;
