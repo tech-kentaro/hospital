@@ -509,8 +509,30 @@ img {
   bottom: -20px;
 }
 
-
 .bx-pager {
   transform-origin: right;
   transform: rotate(90deg);
+}
+
+.modaal-container {
+  border-radius: 15px;
+}
+
+.modaal-close {
+  background-color: $white !important;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    background-color: $black !important;
+  }
+
+  &:hover {
+    background-color: $black !important;
+
+    &::before,
+    &::after {
+      background-color: $white !important;
+    }
+  }
 }

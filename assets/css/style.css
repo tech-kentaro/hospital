@@ -539,6 +539,27 @@ img {
           transform: rotate(90deg);
 }
 
+.modaal-container {
+  border-radius: 15px;
+}
+
+.modaal-close {
+  background-color: #fff !important;
+  border-radius: 50%;
+}
+
+.modaal-close::before, .modaal-close::after {
+  background-color: #333 !important;
+}
+
+.modaal-close:hover {
+  background-color: #333 !important;
+}
+
+.modaal-close:hover::before, .modaal-close:hover::after {
+  background-color: #fff !important;
+}
+
 @media (min-width: 1024px) {
   .contentWidth, .header__container, .navbar__ul, .about__container, .consul__wrapper, .other__container, .footer__container {
     max-width: 1130px;
