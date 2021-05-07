@@ -12,9 +12,10 @@ function mediaQuery() {
 
 function fixedAnime() {
   const winW = $(window).width();
+  const headerH = $('.header').height();
   if (winW >= 1024) {
     const scroll = $(window).scrollTop();
-    if (scroll >= 80) {
+    if (scroll >= headerH) {
       $('.navbar').addClass('navbarFixed');
     } else {
       $('.navbar').removeClass('navbarFixed');
@@ -23,14 +24,12 @@ function fixedAnime() {
 }
 
 function tableFixed() {
-  const scroll = $(window).scrollTop();
   const table = $('.hero__table');
-  const tableH = $('.hero__table').height();
+  const scroll = $(window).scrollTop();
   const winH = $(window).height();
-  const headerH = $('.header').height();
-  const height = 100% - headerH - tableH;
-  console.log(height);
-  if (scroll >= winH - tableH - headerH) {
+  const tableH = $('.hero__table').height();
+  const navH = $('.navbar').height();
+  if (scroll >= winH - tableH - navH) {
     table.removeClass('tableHover');
     table.addClass('tableFixed');
   } else {
