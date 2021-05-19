@@ -195,6 +195,7 @@ img {
     dd {
       text-align: right;
       animation-delay: .3s !important;
+      color: $white !important;
     }
 
     span {
@@ -423,7 +424,8 @@ img {
 
     &::after {
       content: '\f105';
-      font-family: 'FontAwesome';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
       padding-left: 10px;
       font-size: 2.4rem;
     }
@@ -517,8 +519,8 @@ img {
 
     &::before {
       content: '\f105';
-      font-family: 'FontAwesome';
-      font-weight: normal;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
       padding-right: 10px;
       position: relative;
       top: -1px;
